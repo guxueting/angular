@@ -1,0 +1,67 @@
+<div id="box">
+	<header class="header">
+		<ul>
+			<li class="yo-ico">&#xe606;</li>
+			<li>
+				<ul id="title">
+					<li class="on">热点</li><li>关注</li>
+				</ul>
+			</li>
+			<li class="yo-ico">&#xe601;</li>
+		</ul>
+	</header>
+	<div class="swiper-home">
+		<div class="swiper-container" id="home-swiper">
+			<div class="swiper-wrapper">
+				<div class="swiper-slide">
+					<nav>
+						<ul id="home-title">
+							<li v-for='nav in listNav' v-on:click="switchSwiper($index)" v-bind:class="curIndex == $index ? 'active': ''">
+								{{nav}}
+							</li>
+						</ul>
+					</nav>
+					 <div class="swiper-container" id="content-swiper">
+						<div class="swiper-wrapper">
+							<div class="swiper-slide">
+								<div class="scroller" id="scroller">
+									<div class="home-scroll">
+										<!-- <div class="head">
+											<img src="img/arrow.png">
+											<span>下拉刷新</span>
+										</div> -->
+										<ul v-for="obj in list">
+											<li>
+												<img :src="obj[0].img">
+												<b>{{obj[0].title}}</b>
+											</li>
+											<li></li>
+											<li v-if='obj[1]'>
+												<img :src="obj[1].img">
+												<b v-text="obj[1].title"></b>
+											</li>
+										</ul>
+										<!-- <div class="foot">
+											<img src="img/arrow.png">
+											<span>上拉加载</span>
+										</div> -->
+									</div>
+								</div>  
+							</div>
+							<div class="swiper-slide">
+								足球赛事
+							</div>
+							<div class="swiper-slide">
+								足球美女
+							</div>
+						</div>
+					</div> 
+				</div>
+				<div class="swiper-slide">
+					<h1>关注</h1>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div id="footer"v-html="footer"></div>
+</div>

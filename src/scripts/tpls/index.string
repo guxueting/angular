@@ -1,0 +1,9 @@
+<footer class="footer">
+	<ul>
+		<li action-type="switch.tabs" data-tag="home" class="bg"><i class="yo-ico">&#xe613;</i><b>首页</b></li>
+		<li action-type="goto.search"><i class="yo-ico">&#xe629;</i><b>发现</b></li>
+		<li><i class="yo-ico">&#xe60b;</i></li>
+		<li action-type="switch.tabs" data-tag="my"><i class="yo-ico">&#xe62c;</i><b>我的</b></li>
+		<li><i class="yo-ico">&#xe609;</i><b>退出</b></li>
+	</ul>
+</footer>
